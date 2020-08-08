@@ -1,0 +1,8 @@
+<div class="container">
+	<h1 class="text-center text-secondary">All Posts</h1>
+	<% @posts.each do |post| %>
+		<p><%= link_to post.title, admin_view_count_path(post) %></p>
+	<% end %>
+	<%= paginate @posts %>
+
+</div>

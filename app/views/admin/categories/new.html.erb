@@ -1,0 +1,14 @@
+<div class="row bg-secondary" style="height: 600px">
+	<div class="container ">
+		<h1 class="text-center text-warning">Create New Catergory</h1>
+		<%= form_for :category, url: admin_categories_path do |f| %>
+			<div class="form-group">
+				<%= f.label :title %>
+				<%= f.text_field :title , class: "form-control" %>
+			</div>
+			<div class="form-group">
+				<%= f.submit  class: "btn btn-warning" %>
+			</div>
+		<% end %>
+	</div>
+</div>

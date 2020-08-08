@@ -1,0 +1,6 @@
+<h1>Search Results</h1>
+<% if @posts.present? %>
+	<% @posts.each do |post| %>
+		<%= post.title %>
+	<% end %>		
+<% end %>	

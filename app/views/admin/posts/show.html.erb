@@ -1,0 +1,11 @@
+<%= @post.title %>
+<p><%= @post.body %></p>
+<% if @post.post_view.present? %>
+	<p><%= @post.post_view.view_count %></p>
+<% end %>	
+<% @post.categories.each do |category| %>
+	<%= category.title %>
+<% end %>
+<%= link_to "delate", [:admin, @post], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+<%= link_to "edit" , edit_admin_post_path(@post) , class: "btn btn-warning" %>
+<%= link_to "back", admin_posts_path , class: "btn btn-dark" %>
